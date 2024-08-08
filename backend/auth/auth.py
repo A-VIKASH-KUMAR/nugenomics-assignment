@@ -38,10 +38,11 @@ class resetPassword(BaseModel):
    email:str
    password:str
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
 class UserInDB(User):
     hashed_password: str
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
 
 def get_password_hash(password):
     return pwd_context.hash(password)
