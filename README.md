@@ -12,3 +12,7 @@
  1) call /auth/register endpoint to create a user
  2) call /auth/login endpoint to login a user and generate the access token
  3) call /auth/reset-password to reset a existing password if forgot 
+
+# Command to start frontend
+- $ python -m http.server 8080
+- Redirect to http://0.0.0.0:8080/ to open the ui
