@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Add some basic styling to the navigation bar */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Display the response message -->
+    <script>
+        // Get the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+
+        // Display the message
+        if (message) {
+            const body = document.body;
+            const msgDiv = document.createElement('div');
+            msgDiv.innerHTML = message;
+            msgDiv.style.padding = '20px';
+            msgDiv.style.background = '#f0f0f0';
+            msgDiv.style.border = '1px solid #ddd';
+            msgDiv.style.width = '50%';
+            msgDiv.style.margin = '20px auto';
+            body.appendChild(msgDiv);
+        }
+    </script>
+</body>
+</html>
